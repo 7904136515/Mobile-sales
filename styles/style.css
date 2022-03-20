@@ -216,7 +216,11 @@ input[type= 'submit'] {
 
 
 /* Mobile menu bar */
-.nav {
+.nav.menu-btn {
+  display: block;
+}
+
+.nav.menu-btn {
   position: fixed;
   z-index: 999;
   width: 66%;
@@ -249,3 +253,157 @@ input[type= 'submit'] {
   margin: 0.8rem;
   cursor: pointer;
 }
+
+/* Responsive CSS */
+@media only screen and (min-width: 768px){
+
+  .mobile-menu, .mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 12rem auto;
+    justify-content: unset;
+  }
+  .navbar .nav {
+    display: flex;
+    justify-content: space-around;
+    background: none;
+    position: unset;
+  }
+  .navbar .nav ul{
+    display: flex;
+    justify-content: space-evenly;
+  }
+    
+
+  .navbar .nav a {
+    color: black;
+    font-size: 1rem;
+    padding: 0.25rem 1rem;
+  }
+
+    .navbar .nav ul.menu-primary {
+      margin: 0;
+    }
+    
+    .navbar .nav a.btn-primary{
+      color: white;
+      border: 3px solid var(--primary-color);
+      font-weight: bold;
+      border-radius: 0.5rem;
+      display: inline-block;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  section {
+    padding: 10rem 4rem;
+  }
+      
+  .hero .container {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1.2rem;
+  }
+    
+    .hero .container .left-col h1 {
+        font-size: 3rem;
+        width: 90%;
+    }
+
+    .hero-img {
+      width: 30%;
+      margin-right: 1rem;
+    }
+    
+    .hero .btn-primary {
+      margin-right: 1rem;
+    }
+      
+    .hero-cta{
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* features */
+
+    ul.features-list {
+      display: block;
+      margin-left: 5rem;
+    }
+    ul.features-list li {
+      font-size: 1.5rem;
+    }
+
+    
+/* features */
+
+.features-section{
+  position: relative;
+}
+
+.features-list li::before{
+  width: 30px;
+  height: 30px;
+}
+
+.features-section img {
+  display: block;
+  position: absolute;
+  right: 0;
+  width: 22rem;
+  bottom: -2rem;
+}
+
+/* testimonials */
+
+.testimonials-section ul {
+  display: flex;
+ }
+
+.testimonials-section li {
+  margin: 0 1rem;
+  }
+
+  .contact-section{
+    position: relative;
+  }
+
+  .contact-section .container {
+    display: flex;
+  }
+
+  .contact-section .container .right-col {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+  }
+
+  .contact-section .container .right-col iframe {
+    height: 100%;
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+  
+
